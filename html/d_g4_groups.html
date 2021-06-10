@@ -1,0 +1,102 @@
+<!-- BEGIN BREADCRUMBS -->   
+<div class="row breadcrumbs margin-bottom-40">
+    <div class="container">
+        <div class="col-md-4 col-sm-4">
+            <h1>G4小组</h1>
+        </div>
+        <div class="col-md-8 col-sm-8">
+            <ul class="pull-right breadcrumb">
+                <li><a href="home.html">Home</a></li>
+                <li><a href="">G4</a></li>
+                <li class="active">我们的小组</li>
+            </ul>
+        </div>
+    </div>
+</div>
+<!-- END BREADCRUMBS -->
+
+<!-- BEGIN CONTAINER -->   
+<div class="container  margin-bottom-40">
+    <div class="row">
+        <div class="col-md-9 col-sm-9">
+            <!-- BEGIN CAROUSEL -->            
+            <span id="span_group_name"><h4>Group</h4></span>
+            <img src="assets/img/gallery/item_img4.jpg" class="img-responsive" alt="">
+            <br />
+            <div >
+                <span id="span_descriptionC">中英文简介</span>
+                <span id="span_descriptionE"></span>
+            </div>
+            <br />
+            
+            <h4>活动</h4>
+            
+            <div id="d_activity_records">
+            <br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br />
+            </div>
+        </div>
+
+        <div class="col-md-3 col-sm-3 sidebar">
+     
+           <h2 class="no-top-space">G4组 </h2>
+           
+          
+            <div class="tabbable tabbable-custom">
+              <div class="form-group">
+                  <select  class="form-control" id="select_item_term"></select>
+              </div>
+              <div class="form-group">
+                  <select  class="form-control" id="select_g4_group"></select>
+              </div>
+            </div>
+            <br />
+            
+            <h4>指导教师</h4>
+            <div id="d_supervisor"></div>
+            <br />
+            
+            <!---
+            <h4>组长</h4>
+            <div id="d_group_leader"></div>
+            --->
+            
+            <br />
+            <h4>小组成员 <span class="badge badge-info" id="s_tNumber"></span></h4>
+            <ul class="list-inline sidebar-tags" id="u_teammate"></ul>
+                                 
+        </div>            
+    </div>
+</div>
+<!-- END CONTAINER -->
+
+	
+<!-- END COPYRIGHT -->
+
+<!-- Load javascripts at bottom, this will reduce page load time -->
+<!-- BEGIN CORE PLUGINS(REQUIRED FOR ALL PAGES) -->
+<!--[if lt IE 9]>
+<script src="assets/plugins/respond.min.js"></script>  
+<![endif]-->  
+
+<!-- END CORE PLUGINS -->
+
+<script src="ajax/init_term_dropdown.js"></script> 
+<script src="ajax/g4_my_group_info.js"></script> 
+
+<!-- BEGIN PAGE LEVEL JAVASCRIPTS(REQUIRED ONLY FOR CURRENT PAGE) 
+<script type="text/javascript" src="assets/plugins/fancybox/source/jquery.fancybox.pack.js"></script>  
+<script src="assets/scripts/app.js"></script>  -->
+<script type="text/javascript">
+    jQuery(document).ready(function() {
+        initTermDropDown.init();
+		$('#select_item_term').change(function(){
+			//var selValue=$(this).children('option:selected').val();
+			addG4GroupInfo.initGroupDropdown();
+  		});
+		$('#select_g4_group').change(function(){
+			var selValue=$(this).children('option:selected').val();
+			addG4GroupInfo.init(selValue);
+  		});;                      
+    });
+</script>
+<!-- END PAGE LEVEL JAVASCRIPTS -->

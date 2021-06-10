@@ -1,0 +1,176 @@
+<!-- BEGIN BREADCRUMBS -->   
+<div class="row breadcrumbs margin-bottom-40">
+    <div class="container">
+        <div class="col-md-4 col-sm-4">
+            <h1>成长报告</h1>
+        </div>
+        <div class="col-md-8 col-sm-8">
+            <ul class="pull-right breadcrumb">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="">学业报告</a></li>
+                <li class="active">成长报告</li>
+            </ul>
+        </div>
+    </div>
+</div>
+<!-- END BREADCRUMBS -->
+
+<!-- BEGIN CONTAINER -->   
+<div class="container min-hight">
+    <div class="row">
+        <!-- BEGIN LEFT SIDEBAR -->
+        <div class="col-md-1">
+        </div>            
+        <div class="col-md-10">
+          	  
+            <div id="action record">
+                <h2 class="no-top-space"><span class="muted" id="s_yearterm"></span>MYP学生成长报告</h2>
+                <!--<p>班主任</p>
+                <p><span class="muted" id="t_name"></p>-->
+            </div>
+            <br>
+            <div class="form-group">
+                <label></label>
+                  <div class="col-md-4">
+                   <select  class="form-control" id="select_item_term"></select>
+                </div>
+            </div> 
+            <br>     
+            <div class="portlet box">
+                <div class="portlet-body">
+                    <div class="table-responsive">
+                        <h4>学科成绩</h4>
+                        <table class="table table-bordered table-hover">
+                            <thead>
+                                 <tr>
+                                    <th style="width: 4%" class="fc-header-center">#</th>
+                                    <th style="width: 19%">Subject</th>
+                                    <th style="width: 12%" class="fc-header-center">A</th>
+                                    <th style="width: 12%" class="fc-header-center">B</th>
+                                    <th style="width: 12%" class="fc-header-center">C</th>
+                                    <th style="width: 12%" class="fc-header-center">D</th>
+                                    <!--<th style="width: 11%" class="fc-header-center">Homework</th>-->
+                                    <th style="width: 14%" class="fc-header-center">Totals</th>
+                                    <th style="width: 15%" class="fc-header-center">Final Grade</th>
+                                </tr>
+                            </thead>
+                            <tbody id="tbdata"></tbody>
+                        </table>
+                        <span class="help-block">Grade/Boundaries: 1 (0–5); 2 (6–9); 3 (10–14); 4 (15–18); 5 (19–23); 6 (24–27); 7 (28–32).</span>
+                    </div>
+                </div>
+            </div>
+            <br>
+            <div id="action record">
+                <h4 class="no-top-space">奖惩情况</h4>
+                <p id="p_awards"></p>
+                
+            </div>
+            <br>
+            <div id="action record">
+                <h4 class="no-top-space">班主任评语</h4>
+                <p id="p_teacher_comment"></p>
+                
+            </div>
+            <br>
+            <div class="portlet box">
+                <div class="portlet-body">
+                    <div class="table-responsive">
+                        <h4>学期表现评价</h4>
+                        <table class="table table-bordered table-hover">
+                            <thead>
+                                <tr>
+                                    <th style="width: 4%" class="fc-header-center">#</th>
+                                    <th style="width: 18%">学科</th>
+                                    <th style="width: 13%" class="fc-header-center">课堂参与</th>
+                                    <th style="width: 13%" class="fc-header-center">课堂纪律</th>
+                                    <th style="width: 13%" class="fc-header-center">上交作业</th>
+                                    <th style="width: 13%" class="fc-header-center">作业质量</th>
+                                    <th style="width: 13%" class="fc-header-center">团队合作</th>
+                                    <th style="width: 13%" class="fc-header-center">综合努力</th>
+            
+                                </tr>
+                            </thead>
+                            <tbody id="asstbdata"></tbody>
+                        </table>
+                        <!--<span class="help-block">EE: Exceeding Expectations; ME: Meeting Expectations; AE: Approaching Expectations; BE: Below Expectations.</span>-->
+                    </div>
+                </div>
+            </div>
+            <br>
+            <div class="row">
+                <div class="portlet-body col-xs-8">
+                     <h4 class="no-top-space">SA活动评价</h4>
+                     <table class="table table-bordered table-hover">
+                        <thead>
+                            <tr>
+                                <th style="width: 33%" class="fc-header-center">项目</th>
+                                <th style="width: 33%" class="fc-header-center">服务时间</th>
+                                <th style="width: 33%" class="fc-header-center">等级</th>
+                                
+                            </tr>
+                        </thead>
+                        <tbody id="castbdata"></tbody>
+                    </table>
+                </div>
+                <div class="col-xs-1">
+                </div>
+                <div class="portlet-body col-xs-3">
+                     <h4 class="no-top-space">GC评价</h4>
+                     <table class="table table-bordered table-hover">
+                        <thead>
+                            <tr>
+                                <th style="width: 50%" class="fc-header-center">Task</th>
+                        		<th style="width: 50%" class="fc-header-center">Discipline</th>
+                            </tr>
+                        </thead>
+                        <tbody id="toktbdata"></tbody>
+                    </table>
+                </div>
+           </div>
+           <br />
+           <div class="row">
+              <div class="portlet-body col-xs-5">
+                  <h4 class="no-top-space">考勤记录</h4>
+                  
+                      <table class="table table-bordered table-hover">
+                          <thead>
+                              <tr>
+                                  <th style="width: 33%" class="fc-header-center">事假(天)</th>
+                                  <th style="width: 33%" class="fc-header-center">病假(天)</th>
+                                  <th style="width: 33%" class="fc-header-center">迟到(次)</th>
+                              </tr>
+                          </thead>
+                          <tbody id="attetbdata"></tbody>
+                      </table>
+                  
+              </div>
+          </div>
+          
+          <br />  <br /> <br />
+	  </div>
+   </div>
+    <!-- END BEGIN BLOG -->
+</div>
+<!-- END CONTAINER -->
+
+    <script type="text/javascript" src="assets/plugins/fuelux/js/spinner.min.js"></script>
+    <script type="text/javascript" src="assets/plugins/fancybox/source/jquery.fancybox.pack.js"></script>  
+    <!--<script src="assets/scripts/app.js"></script>  -->
+    
+    <script src="ajax/init_term_dropdown.js"></script>
+    <script src="ajax/myp_search_student_progress_report.js"></script>
+    <script type="text/javascript">
+        jQuery(document).ready(function() {
+            //App.init();
+			 initTermDropDown.init();
+			 $('#spinner1').spinner(); 
+			 $('#select_item_term').change(function(){
+				var selTermValue = $(this).children('option:selected').val();
+				//alert(selTermValue); 
+				sTableEditable.addDataToTable(selTermValue);
+  			});
+			                     
+        });
+    </script>
+    <!-- END PAGE LEVEL JAVASCRIPTS -->

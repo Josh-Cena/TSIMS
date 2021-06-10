@@ -1,0 +1,160 @@
+<!-- BEGIN BREADCRUMBS -->   
+<div class="row breadcrumbs margin-bottom-40">
+    <div class="container">
+        <div class="col-md-4 col-sm-4">
+            <h1>G4</h1>
+        </div>
+        <div class="col-md-8 col-sm-8">
+            <ul class="pull-right breadcrumb">
+                <li><a href="home.html">Home</a></li>
+                <li><a href="">G4</a></li>
+                <li class="active">加入G4组</li>
+            </ul>
+        </div>
+    </div>
+</div>
+<!-- END BREADCRUMBS -->
+
+<!-- BEGIN CONTAINER --> 
+
+<div class="container  min-hight">
+    <div class="row">
+        
+        <div class="col-md-9 col-sm-9">
+ 
+            <div class="clearfix">
+                
+                <div class="panel panel-info">
+                    <!-- Default panel contents success-->
+                    <div class="panel-heading">
+                        <h3 class="panel-title">加入G4组</h3>
+                    </div>
+                   
+                    <!-- Table -->
+                    <table class="table">
+                        <thead>
+                            <tr>
+                               
+                                <th style="width: 12%" class="fc-header-center">组别</th>
+                                <th style="width: 12%" class="fc-header-center">小组成员数</th>
+                                <th style="width: 12%" class="fc-header-center">已加入人数</th>
+                                 
+                                <th style="width: 6%"  class="fc-header-center"></th>
+                                <th style="width: 10%" >物理</th>
+                                <th style="width: 6%"  class="fc-header-center"></th>
+                                <th style="width: 10%" >化学</th>
+                                <th style="width: 6%"  class="fc-header-center"></th>
+                                <th style="width: 10%" >生物</th>
+                               
+                                <th style="width: 15%" class="fc-header-center"></th>
+                            </tr>
+                        </thead>
+                        <tbody id="tbdata"></tbody >
+                    </table>
+                    <div id="students_details"></div>
+                </div>
+            </div>
+            <div class="form-actions right">
+                  <button type="button" class="btn info" id="bn_delete_add_info">退出当前组</button>
+                  <!--<button type="button" class="btn default" id="bn_modify_your_records">Modify your records</button>-->                            
+            </div> 
+            <br />    
+        </div>
+
+        <div class="col-md-3 col-sm-3 sidebar">
+            <h2 class="no-top-space">我的信息</h2>
+            
+            <address>
+                
+                Student No.: <span id="s_studentno"></span><br>
+                Name:<span id="s_studentname"></span><br>
+                <!--<abbr title="Phone">P:</abbr> (234) 145-1810-->
+            </address>
+            <address>
+                
+                Group: <span id="s_group"></span><br>
+                Subject: <span id="s_subject"></span><br>
+                <!--<abbr title="Phone">P:</abbr> (234) 145-1810-->
+            </address>
+            
+
+
+            <h2>G4说明</h2>    
+            <div id="accordion1" class="panel-group">
+            
+                <div class="panel panel-default">
+                    <div class="panel-heading">
+                        <h4 class="panel-title">
+                            <a class="accordion-toggle" data-toggle="collapse" data-parent="#accordion1" href="#accordion1_1">
+                            说明(Click me)
+                            </a>
+                        </h4>
+                    </div>
+                    <div id="accordion1_1" class="panel-collapse collapse">
+                        <div class="panel-body">
+                           
+                            <p>每人只能选择一个组及一个学科。</p>
+                            <p>如果重新选择了另一个组，系统会自动删除前一个选择。</p>
+                            <p>点击下方灰色“退出当前组”按钮，将退出你已经选择的组，这时你需要重新选择。</p>
+
+                        </div>
+                    </div>
+                </div>         
+                
+               
+            </div>
+            <!-- END FORM-->                             
+        </div>            
+    </div>
+</div>
+<!-- END CONTAINER -->
+
+	
+<!-- END COPYRIGHT -->
+
+<!-- Load javascripts at bottom, this will reduce page load time -->
+<!-- BEGIN CORE PLUGINS(REQUIRED FOR ALL PAGES) -->
+<!--[if lt IE 9]>
+<script src="assets/plugins/respond.min.js"></script>  
+<![endif]-->  
+<script src="assets/plugins/bootstrap-modal/js/bootstrap-modalmanager.js" type="text/javascript" ></script>
+<script src="assets/plugins/bootstrap-modal/js/bootstrap-modal.js" type="text/javascript" ></script>
+
+<!-- BEGIN PAGE LEVEL JAVASCRIPTS(REQUIRED ONLY FOR CURRENT PAGE) -->
+<script src="ajax/g4_add_group_info.js"></script>
+<script type="text/javascript">
+    jQuery(document).ready(function(){
+       //alert("?");
+       addG4Info.init();
+	   $('#bn_delete_add_info').click(function(){
+		 if(confirm("你确定要删除你的选择?")){
+              //alert(idVal);
+              addG4Info.deleteMemberInfo();
+            }
+	   });
+        
+       $("button.btn.blue").die().live("click",function(){
+            if(confirm("你确定你要加入这个组?")){
+                var idVal = $(this).attr("id");
+                addG4Info.addMemberInfo(idVal);
+            }
+        }); 
+		$("button.btn.yellow").die().live("click",function(){
+            if(confirm("你确定你要加入这个组?")){
+                var idVal = $(this).attr("id");
+                //alert(idVal);
+                addG4Info.addMemberInfo(idVal);
+            }
+        });
+		$("button.btn.green").die().live("click",function(){
+            if(confirm("你确定你要加入这个组?")){
+                var idVal = $(this).attr("id");
+                //alert(idVal);
+                addG4Info.addMemberInfo(idVal);
+            }
+        });                   
+    });
+    
+    
+</script>
+<!-- END PAGE LEVEL JAVASCRIPTS -->

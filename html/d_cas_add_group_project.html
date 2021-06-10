@@ -1,0 +1,75 @@
+<!-- BEGIN BREADCRUMBS -->   
+<div class="row breadcrumbs margin-bottom-40">
+    <div class="container">
+        <div class="col-md-4 col-sm-4">
+            <h1>Project</h1>
+        </div>
+        <div class="col-md-8 col-sm-8">
+            <ul class="pull-right breadcrumb">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="">CAS</a></li>
+                <li class="active">Project</li>
+            </ul>
+        </div>
+    </div>
+</div>
+<!-- END BREADCRUMBS -->
+
+<!-- BEGIN CONTAINER -->   
+<div class="container min-hight">
+    <div class="row">
+        <!-- BEGIN LEFT SIDEBAR -->            
+        <div class="col-md-9 blog-tag-data margin-bottom-40">
+            <h2>确认你的项目活动组</h2>
+
+            <br />
+           
+            <div class="col-md-10 table-responsive">
+                <table class="table table-bordered ">
+                    <thead>
+                        <tr>
+                        <th style="width: 5%" class="fc-header-center"></th>
+                        <th style="width: 40%" class="fc-header-center">活动组名称</th>
+                        <th style="width: 10%" class="fc-header-center">注册号</th>
+                        <th style="width: 15%" class="fc-header-center">类别</th>
+                       	<th style="width: 10%" class="fc-header-center">项目组</th>
+                        <th style="width: 10%" class="fc-header-center"></th>
+                    </tr>
+                    </thead>
+                    <tbody id="tableData"></tbody>
+                </table>
+                <p><span class="text-danger">*</span> 选择一个社团作为你的Project！</p>
+            </div>
+                   
+            
+         </div>
+        <!-- END LEFT SIDEBAR -->
+
+        <!-- BEGIN RIGHT SIDEBAR --> 
+        
+        <!-- END RIGHT SIDEBAR -->            
+    </div>
+    <!-- END BEGIN BLOG -->
+</div>
+<!-- END CONTAINER -->
+
+    <!-- BEGIN PAGE LEVEL JAVASCRIPTS(REQUIRED ONLY FOR CURRENT PAGE) -->
+    <script type="text/javascript" src="assets/plugins/bootstrap-datepicker/js/bootstrap-datepicker.js"></script>
+    <script type="text/javascript" src="assets/plugins/fuelux/js/spinner.min.js"></script>
+    <script type="text/javascript" src="assets/plugins/fancybox/source/jquery.fancybox.pack.js"></script>  
+    <!--<script src="assets/scripts/app.js"></script>  -->
+    <script src="ajax/cas_add_group_project.js"></script>
+    <script type="text/javascript">
+        jQuery(document).ready(function() {
+ 			addGroupRecordInfo.init();
+			$("button.btn.blue").die().live("click",function(){
+				if(confirm("Are you really sure you want to update this record?")){
+					var idVal = $(this).attr("id");
+					//alert(idVal);
+					addGroupRecordInfo.updateRecords(idVal);
+				}
+			});
+  
+        });
+    </script>
+    <!-- END PAGE LEVEL JAVASCRIPTS -->

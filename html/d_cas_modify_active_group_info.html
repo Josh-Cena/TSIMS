@@ -1,0 +1,239 @@
+<!-- BEGIN BREADCRUMBS -->   
+<div class="row breadcrumbs margin-bottom-40">
+    <div class="container">
+        <div class="col-md-4 col-sm-4">
+            <h1>社团信息</h1>
+        </div>
+        <div class="col-md-8 col-sm-8">
+            <ul class="pull-right breadcrumb">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="">CAS</a></li>
+                <li class="active">社团信息</li>
+            </ul>
+        </div>
+    </div>
+</div>
+<!-- END BREADCRUMBS -->
+
+<!-- BEGIN CONTAINER -->   
+<div class="container min-hight">
+    <div class="row">
+        <!-- BEGIN LEFT SIDEBAR -->            
+        <div class="col-md-9 blog-tag-data margin-bottom-40">
+           <h2>修改信息</h2>
+            
+            <div class="row">
+                <div class="col-md-6 blog-tag-data">
+                    <div class="form-group">
+                        <div class="col-md-12">
+                             <input type="text" class="form-control"  placeholder="社团名称（中文）" id="txt_group_nameC">
+                        </div>
+                    </div>
+                 </div>
+                 <div class="col-md-6 blog-tag-data">
+                    <div class="form-group">
+                    
+                        <div class="col-md-12">
+                             <input type="text" class="form-control"  placeholder="社团名称（英文）" id="txt_group_nameE">
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="form-group">
+                <div class="col-md-12">
+                      <p>社团名称修改应慎重,频繁修改,不利于社团形象的推广!</p>
+                </div>
+            </div>
+            <div class="form-group">
+                <div class="col-md-12">
+                      <button type="button" class="btn blue" id="bn_modify_mygroup_name">修改社团名称</button>
+                </div>
+            </div>
+            
+             <div class="row">
+                <div class="col-md-6 blog-tag-data">
+                    <div class="form-group">
+                        <div class="col-md-12">
+                             <select  class="form-control" id="s_add_group_leader"></select>
+                        </div>
+                    </div>
+                	<div class="form-group">
+                        <div class="col-md-12">
+                              <p>如果有多名,可以重复添加!</p>
+                        </div>
+                    </div>
+                   <div class="form-group">
+                      <div class="col-md-12">
+                            <button type="button" class="btn green" id="bn_add_group_leader">添加副社长</button>
+                      </div>
+                  </div>
+               </div>  
+            
+                <div class="col-md-6 blog-tag-data">
+                    <div class="form-group">
+                        <div class="col-md-12">
+                             <select  class="form-control" id="s_chief_groupleader"></select>
+                        </div>
+                    </div>
+                	<div class="form-group">
+                        <div class="col-md-12">
+                              <p>如果该同学不再适合担任本职务,可以从副社长名单中移除!</p>
+                        </div>
+                    </div>
+                   <div class="form-group">
+                      <div class="col-md-12">
+                            <button type="button" class="btn purple" id="bn_delete_group_leader">移除副社长</button>
+                      </div>
+                   </div>
+                </div> 
+               
+            </div>
+			
+            <div class="form-group">
+                <div class="col-md-12">
+                     <select  class="form-control" id="s_delete_group_member"></select>
+                </div>
+            </div>
+			
+            <div class="form-group">
+                <div class="col-md-12">
+                      <p>如果社团成员长期不参加社团活动,你可以建议其退出社团,但从名单上移出,还需要指导教师的最终确认!</p>
+                </div>
+            </div>
+           	<div class="form-group">
+                <div class="col-md-12">
+                      <button type="button" class="btn purple" id="bn_delete_group_member">建议退出社团</button>
+                      <!--<button type="button" class="btn default">Cancel</button>  -->                       
+                </div>
+			</div>
+  			
+            
+            
+            
+            <div class="form-group">
+                <div class="col-md-12">
+                     <textarea class="form-control" rows="6"  placeholder="中文社团简介(不超过250字)" id="text_descriptionC"></textarea>
+                </div>
+            </div>
+			<div class="form-group">
+                <div class="col-md-12">
+                     <textarea class="form-control" rows="8"  placeholder="英文社团简介(不超过250字)" id="text_descriptionE"></textarea>
+                </div>
+            </div>
+            <div class="form-group">
+                <div class="col-md-12">
+                      <p>你可以修改社团简介的中英文版,简介应突出介绍社团的任务及特点,原则上不能超过250字,超过部分系统不会显示!</p>
+                </div>
+            </div>
+           	<div class="form-group">
+                <div class="col-md-12">
+                      <button type="button" class="btn blue" id="bn_modify_group_synopsis">修改社团简介</button>
+                      <!--<button type="button" class="btn default">Cancel</button>  -->                       
+                </div>
+			</div>
+            
+           
+    </div>
+        <!-- END LEFT SIDEBAR -->
+
+        <!-- BEGIN RIGHT SIDEBAR --> 
+        <div class="col-md-3 blog-sidebar margin-bottom-40">
+        	<h2>我的社团</h2>
+            
+            <div class="form-group">
+            	<select  class="form-control" id="select_my_group"></select>
+            </div>
+            <h4>指导教师</h4>
+            
+            <div class="form-group" id="d_supervisor">
+            	
+            </div>
+            <h4>副社长</h4>
+             <ul class="list-inline sidebar-tags" id="u_chief_group_leader"></ul>
+            <div class="form-group">
+            	
+            </div>
+            <h4>社团成员 <span class="badge badge-info" id="s_tNumber"></span></h4>
+            
+            <ul class="list-inline sidebar-tags" id="u_teammate"></ul>
+            <!-- END BLOG TALKS -->
+			<div id="accordion1" class="panel-group">
+                <div class="panel panel-default">
+                    <div class="panel-heading">
+                        <h4 class="panel-title">
+                            <a class="accordion-toggle" data-toggle="collapse" data-parent="#accordion1" href="#accordion1_1">
+                            说明(Click me)
+                            </a>
+                        </h4>
+                    </div>
+                    <div id="accordion1_1" class="panel-collapse collapse">
+                        <div class="panel-body">
+                            <p>本页面仅有社长拥有使用权！</p>
+                            
+                            <p>每修改一条信息，点击相应的按钮，可保存所修改的信息，修改成功后的信息，将显示在相应的栏目中！</p>
+                        </div>
+                    </div>
+                </div>         
+            </div>
+        </div>
+        <br />
+        </div>
+        <!-- END RIGHT SIDEBAR -->            
+    </div>
+    <!-- END BEGIN BLOG -->
+</div>
+<!-- END CONTAINER -->
+
+    <!-- BEGIN PAGE LEVEL JAVASCRIPTS(REQUIRED ONLY FOR CURRENT PAGE) -->
+    <script type="text/javascript" src="assets/plugins/bootstrap-datepicker/js/bootstrap-datepicker.js"></script>
+    <script type="text/javascript" src="assets/plugins/fuelux/js/spinner.min.js"></script>
+    <script type="text/javascript" src="assets/plugins/fancybox/source/jquery.fancybox.pack.js"></script>  
+    <!--<script src="assets/scripts/app.js"></script>  -->
+    <script src="ajax/cas_modify_group_info.js"></script> 
+    <script type="text/javascript">
+        jQuery(document).ready(function() {
+            var selValue = 2;
+			addGroupInfo.initMyGroupDropdown(selValue);
+			$('#bn_modify_mygroup_name').attr({'disabled':'disabled'});
+			$('#bn_add_group_leader').attr({'disabled':'disabled'});
+			$('#bn_delete_group_leader').attr({'disabled':'disabled'});
+			$('#bn_delete_group_member').attr({'disabled':'disabled'});
+			$('#bn_modify_group_synopsis').attr({'disabled':'disabled'});
+			//$('#bn_save_your_records').attr({'disabled':'disabled'});
+			//$('#select_category').change(function(){
+			//	var selValue=$(this).children('option:selected').val();
+			//	initCASGroupsDropDown.init(selValue);
+			//});
+			$('#select_my_group').change(function(){
+				var selValue=$(this).children('option:selected').val();
+				$('#bn_modify_mygroup_name').removeAttr("disabled");
+				$('#bn_add_group_leader').removeAttr("disabled");
+				$('#bn_delete_group_leader').removeAttr("disabled");
+				$('#bn_delete_group_member').removeAttr("disabled");
+				$('#bn_modify_group_synopsis').removeAttr("disabled");
+				addGroupInfo.addMyGroupInfo(selValue);
+				
+				//$("#bn_save_your_records").removeAttr("disabled");
+			});
+			$('#bn_modify_mygroup_name').click(function(){
+				addGroupInfo.modifyGroupName();
+			});
+			$('#bn_add_group_leader').click(function(){
+				addGroupInfo.modifyChiefLeader();
+			});
+			$('#bn_delete_group_leader').click(function(){
+				addGroupInfo.deleteChiefLeader();
+			});
+			$('#bn_delete_group_member').click(function(){
+				addGroupInfo.deleteMemberFromGroup();
+			});
+			$('#bn_modify_group_synopsis').click(function(){
+				addGroupInfo.modifyGroupDescription();
+			});
+			//$('#bn_i_want_to_quit').click(function(){
+			//	addGroupInfo.deleteGroupMember();
+			//});
+  
+        });
+    </script>
+    <!-- END PAGE LEVEL JAVASCRIPTS -->

@@ -1,0 +1,92 @@
+<!-- BEGIN BREADCRUMBS -->   
+<div class="row breadcrumbs margin-bottom-40">
+    <div class="container">
+        <div class="col-md-4 col-sm-4">
+            <h1>拓展课评价</h1>
+        </div>
+        <div class="col-md-8 col-sm-8">
+            <ul class="pull-right breadcrumb">
+                <li><a href="home.html">Home</a></li>
+                <li><a href="">拓展课</a></li>
+                <li class="active">评价</li>
+            </ul>
+        </div>
+    </div>
+</div>
+<!-- END BREADCRUMBS -->
+
+<!-- BEGIN CONTAINER -->   
+<div class="container  margin-bottom-40">
+    <div class="row">
+        <div class="col-md-9 col-sm-9">
+            <!-- BEGIN CAROUSEL -->            
+            <span id="span_group_name"><h4>评价</h4></span>
+            <img src="assets/img/gallery/item_img4.jpg" class="img-responsive" alt="">
+            <br />
+            <div class="portlet box">
+                <div class="portlet-body">
+                    <div class="table-responsive">
+                        <table class="table table-bordered table-hover">
+                            <thead>
+                                <tr>
+                                    <th style="width: 8%" class="fc-header-center"></th>
+                                    <th style="width: 15%" class="fc-header-center">学期</th>
+                                    <th style="width: 32%" class="fc-header-center">课程名称</th>
+                                    <th style="width: 23%" class="fc-header-center">类别</th>
+                                    <th style="width: 10%" class="fc-header-center">分数</th>
+                                    <th style="width: 10%" class="fc-header-center">学分</th>
+                                    
+                            	</tr>
+                            </thead>
+                            <tbody id="tbdata"></tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+            <div id="d_activity_records">
+            <br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br />
+            </div>
+        </div>
+
+        <div class="col-md-3 col-sm-3 sidebar">
+     		<span><h4>本学期选课 </h4></span>
+           <div class="panel panel-success">
+                <!-- Default panel contents -->
+                <div class="panel-body">
+                   <span id="s_Course">Python编程入门</span>
+                </div>
+                <!-- Table -->
+            </div>
+           <span><h4>说明 </h4></span>
+           <div class="panel panel-success">
+                <!-- Default panel contents -->
+                <div class="panel-body">
+                    
+                     <p>IC 拓展课向6-9 年级学生开放，每位学生在6-9 年级四年内必须修满至少4 个学分，每门课程每学期将统
+计一次成绩，如合格，计1 学分。如不合格(1 分及以下)或未选课，则计0 学分或不给予学分。</p><p>选课要求课程类型四年内最多重复一次，但课程科目不得重复。</p>
+                </div>
+                <!-- Table -->
+            </div>
+            
+        </div>
+        <br />
+         
+        </div>            
+    </div>
+</div>
+<!-- END CONTAINER -->
+
+<script src="ajax/c_extra_evaluate.js"></script> 
+<script type="text/javascript">
+    jQuery(document).ready(function() {
+		
+       	addExtraEvaluate.init();
+		//$('#select_item_term').change(function(){
+		//	var selValue=$(this).children('option:selected').val();
+		//	addGCEvaluate.init(selValue);
+  		//});
+		//alert('ok!');
+		                     
+    });
+</script>
+<!-- END PAGE LEVEL JAVASCRIPTS -->

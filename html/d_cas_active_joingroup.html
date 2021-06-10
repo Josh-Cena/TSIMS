@@ -1,0 +1,117 @@
+<!-- BEGIN BREADCRUMBS -->   
+<div class="row breadcrumbs margin-bottom-40">
+    <div class="container">
+        <div class="col-md-4 col-sm-4">
+            <h1>加入社团</h1>
+        </div>
+        <div class="col-md-8 col-sm-8">
+            <ul class="pull-right breadcrumb">
+                <li><a href="home.html">Home</a></li>
+                <li><a href="">CAS</a></li>
+                <li class="active">加入社团</li>
+            </ul>
+        </div>
+    </div>
+</div>
+<!-- END BREADCRUMBS -->
+
+<!-- BEGIN CONTAINER -->   
+<div class="container  margin-bottom-40">
+    <div class="row">
+        <div class="col-md-9 col-sm-9">
+            <!-- BEGIN CAROUSEL -->            
+            <span id="span_group_name"><h4>Group</h4></span>
+            <img src="assets/img/gallery/item_img1.jpg" class="img-responsive" alt="">
+            
+            <div class="row">
+            <br />    
+            </div>
+            <span id="span_leader_name"><h4>社长</h4></span>
+            <div class="news-item-page" id="d_teamleader"></div>
+            
+            <span id="span_leader_name"><h4>社团简介</h4></span>
+            <div class="news-item-page">
+                <span id="span_descriptionC"></span>
+                <span id="span_descriptionE">
+                <br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br />
+                </span>
+            </div>
+        </div>
+
+        <div class="col-md-3 col-sm-3 sidebar">
+           <h2 class="no-top-space">社团 </h2>
+           
+          
+            <div class="tabbable tabbable-custom">
+              <div class="form-group">
+                  <select  class="form-control" id="select_category"></select>
+              </div>
+              <div class="form-group">
+                  <select  class="form-control" id="select_group"></select>
+              </div>
+            </div>
+            <br />
+            
+            <h4>指导教师</h4>
+            <div id="d_supervisor"></div>
+            
+            <br />
+            <h4>我的队友 <span class="badge badge-info" id="s_tNumber"></span></h4>
+            <ul class="list-inline sidebar-tags" id="u_teammate"></ul>
+            <br />
+            <div class="form-group" id="d_projectyes">
+                  <label class="checkbox-inline">
+                  <input type="checkbox" id="chkbox_projectyes"  value="1"> &nbsp; 是否你的Project?
+                  </label>
+            </div>
+            <div class="form-actions fluid">
+               <div >
+                  <button type="button" class="btn green" id="bn_i_want_to_join">我要加入</button>
+                  <button type="button" class="btn default" id="bn_i_want_to_quit">退出社团</button>                            
+               </div>
+            </div>
+        </div>            
+    </div>
+</div>
+<!-- END CONTAINER -->
+
+	
+<!-- END COPYRIGHT -->
+
+<!-- Load javascripts at bottom, this will reduce page load time -->
+<!-- BEGIN CORE PLUGINS(REQUIRED FOR ALL PAGES) -->
+<!--[if lt IE 9]>
+<script src="assets/plugins/respond.min.js"></script>  
+<![endif]-->  
+
+<!-- END CORE PLUGINS -->
+<script src="ajax/cas_init_category_dropdown.js"></script> 
+<script src="ajax/cas_init_groups_dropdown.js"></script> 
+<script src="ajax/cas_add_group_info.js"></script> 
+
+<!-- BEGIN PAGE LEVEL JAVASCRIPTS(REQUIRED ONLY FOR CURRENT PAGE) 
+<script type="text/javascript" src="assets/plugins/fancybox/source/jquery.fancybox.pack.js"></script>  
+<script src="assets/scripts/app.js"></script>  -->
+<script type="text/javascript">
+    jQuery(document).ready(function() {
+        //App.init();  
+		initCAScategoryDropDown.init();
+		$('#select_category').change(function(){
+			var selValue=$(this).children('option:selected').val();
+			initCASGroupsDropDown.init(selValue);
+  		});
+		$('#select_group').change(function(){
+			var selValue=$(this).children('option:selected').val();
+			addGroupInfo.init(selValue);
+			$("#chkbox_projectyes").removeAttr("checked");
+  		});
+		$('#bn_i_want_to_join').click(function(){
+			addGroupInfo.saveGroupMember();
+		});
+		$('#bn_i_want_to_quit').click(function(){
+			addGroupInfo.deleteGroupMember();
+		});
+		                    
+    });
+</script>
+<!-- END PAGE LEVEL JAVASCRIPTS -->

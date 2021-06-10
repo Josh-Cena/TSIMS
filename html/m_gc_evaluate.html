@@ -1,0 +1,96 @@
+<!-- BEGIN BREADCRUMBS -->   
+<div class="row breadcrumbs margin-bottom-40">
+    <div class="container">
+        <div class="col-md-4 col-sm-4">
+            <h1>GC评价</h1>
+        </div>
+        <div class="col-md-8 col-sm-8">
+            <ul class="pull-right breadcrumb">
+                <li><a href="home.html">Home</a></li>
+                <li><a href="">GC</a></li>
+                <li class="active">评价</li>
+            </ul>
+        </div>
+    </div>
+</div>
+<!-- END BREADCRUMBS -->
+
+<!-- BEGIN CONTAINER -->   
+<div class="container  margin-bottom-40">
+    <div class="row">
+        <div class="col-md-9 col-sm-9">
+            <!-- BEGIN CAROUSEL -->            
+            <span id="span_group_name"><h4>评价</h4></span>
+            <img src="assets/img/gallery/item_img4.jpg" class="img-responsive" alt="">
+            <br />
+            <div class="portlet box">
+                <div class="portlet-body">
+                    <div class="table-responsive">
+                        <table class="table table-bordered table-hover">
+                            <thead>
+                                <tr>
+                                    <th style="width: 8%" class="fc-header-center"></th>
+                                    <th style="width: 42%">活动描述</th>
+                                    <th style="width: 16%" class="fc-header-center">Task</th>
+                                    <th style="width: 16%" class="fc-header-center">Discipline</th>
+                                    <th style="width: 16%" class="fc-header-center">活动日期</th>
+                            	</tr>
+                            </thead>
+                            <tbody id="tbdata"></tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+            <div id="d_activity_records">
+            <br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br />
+            </div>
+        </div>
+
+        <div class="col-md-3 col-sm-3 sidebar">
+     
+           <span><h4>学期 </h4></span>
+           
+          
+            <div class="tabbable tabbable-custom">
+              <div class="form-group">
+                  <select  class="form-control" id="select_item_term"></select>
+              </div>
+              
+            </div>
+            <br />
+            
+           
+                                 
+        </div>            
+    </div>
+</div>
+<!-- END CONTAINER -->
+
+	
+<!-- END COPYRIGHT -->
+
+<!-- Load javascripts at bottom, this will reduce page load time -->
+<!-- BEGIN CORE PLUGINS(REQUIRED FOR ALL PAGES) -->
+<!--[if lt IE 9]>
+<script src="assets/plugins/respond.min.js"></script>  
+<![endif]-->  
+
+<!-- END CORE PLUGINS -->
+
+<script src="ajax/init_term_dropdown.js"></script> 
+<script src="ajax/sa_gc_evaluate.js"></script> 
+
+<!-- BEGIN PAGE LEVEL JAVASCRIPTS(REQUIRED ONLY FOR CURRENT PAGE) 
+<script type="text/javascript" src="assets/plugins/fancybox/source/jquery.fancybox.pack.js"></script>  
+<script src="assets/scripts/app.js"></script>  -->
+<script type="text/javascript">
+    jQuery(document).ready(function() {
+        initTermDropDown.init();
+		$('#select_item_term').change(function(){
+			var selValue=$(this).children('option:selected').val();
+			addGCEvaluate.init(selValue);
+  		});
+		                     
+    });
+</script>
+<!-- END PAGE LEVEL JAVASCRIPTS -->

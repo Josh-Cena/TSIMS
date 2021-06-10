@@ -1,0 +1,93 @@
+<!-- BEGIN BREADCRUMBS -->   
+<div class="row breadcrumbs margin-bottom-40">
+    <div class="container">
+        <div class="col-md-4 col-sm-4">
+            <h1>记录与反思</h1>
+        </div>
+        <div class="col-md-8 col-sm-8">
+            <ul class="pull-right breadcrumb">
+                <li><a href="home.html">Home</a></li>
+                <li><a href="">CAS</a></li>
+                <li class="active">记录与反思</li>
+            </ul>
+        </div>
+    </div>
+</div>
+<!-- END BREADCRUMBS -->
+
+<!-- BEGIN CONTAINER -->   
+<div class="container  margin-bottom-40">
+    <div class="row">
+       <div class="col-md-9">
+           <div class="col-md-12 blog-tag-data">
+               <div id="records_head">
+                <h4>没有记录</h4>  
+               </div>
+               <div id="records_or_reflection">
+               <br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br />
+               <br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br />
+               </div>
+           </div>
+           <div class="portlet-body" >
+                <hr />
+                <div>
+                    <p id="dynamic_pager_content1" class="well">Page 1 </p>
+                    <p id="dynamic_pager_demo1"></p>
+                </div>
+            </div>            
+        </div>
+
+        <div class="col-md-3 col-sm-3 sidebar">
+            <h4>Records or Reflections</h4>
+            <div class="form-group">
+                <select  class="form-control" id="select_item_term"></select>
+            </div>
+            <div class="form-group">
+                <select  class="form-control" id="select_reco_or_refle">
+                    <option value="0">选择 ......</option>
+                    <option value="1">活动记录</option>
+                    <option value="2">反思</option>
+                </select>
+            </div>
+                                 
+        </div>            
+    </div>
+</div>
+<!-- END CONTAINER -->
+
+	
+<!-- END COPYRIGHT -->
+
+<!-- Load javascripts at bottom, this will reduce page load time -->
+<!-- BEGIN CORE PLUGINS(REQUIRED FOR ALL PAGES) -->
+<!--[if lt IE 9]>
+<script src="assets/plugins/respond.min.js"></script>  
+<![endif]-->  
+
+<!-- END CORE PLUGINS 
+
+-->
+<script type="text/javascript" src="assets/plugins/data-tables/jquery.dataTables.js"></script>
+<script type="text/javascript" src="assets/plugins/data-tables/DT_bootstrap.js"></script>
+<script type="text/javascript" src="assets/plugins/jquery-bootpag/jquery.bootpag.min.js"></script>
+<script src="ajax/init_term_dropdown.js"></script> 
+
+<script src="ajax/cas_student_reflection_browse.js"></script> 
+
+<!-- BEGIN PAGE LEVEL JAVASCRIPTS(REQUIRED ONLY FOR CURRENT PAGE) 
+<script type="text/javascript" src="assets/plugins/fancybox/source/jquery.fancybox.pack.js"></script>  
+<script src="assets/scripts/app.js"></script>  -->
+<script type="text/javascript">
+    jQuery(document).ready(function() {
+        initTermDropDown.init();
+		$('#select_item_term').change(function(){
+			//var selValue=$(this).children('option:selected').val();
+			recordsList.addDataTolist();
+  		});
+		$('#select_reco_or_refle').change(function(){
+			
+			recordsList.addDataTolist();
+  		});;                      
+    });
+</script>
+<!-- END PAGE LEVEL JAVASCRIPTS -->

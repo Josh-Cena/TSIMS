@@ -1,0 +1,159 @@
+<!-- BEGIN BREADCRUMBS -->   
+<div class="row breadcrumbs margin-bottom-40">
+    <div class="container">
+        <div class="col-md-4 col-sm-4">
+            <h1>Extended Essays</h1>
+        </div>
+        <div class="col-md-8 col-sm-8">
+            <ul class="pull-right breadcrumb">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="">EE</a></li>
+                <li class="active">EE进度</li>
+            </ul>
+        </div>
+    </div>
+</div>
+<!-- END BREADCRUMBS -->
+
+<!-- BEGIN CONTAINER -->   
+<div class="container min-hight">
+    <div class="row">
+        <!-- BEGIN LEFT SIDEBAR -->            
+        <div class="col-md-9 blog-tag ">
+            <h2>Title: <span id="p_text_title">No content!</span></h2>
+            <div class="form-group" id="d_text_title">
+                <input type="text" class="form-control"  placeholder="Add the title of the article" id="text_ee_title">
+                <input type="hidden" name="s_h_flag" id="s_h_flag" value="0">
+            </div>
+            <br />
+            <div class="row">
+				<div class="col-md-12 col-sm-12">
+					
+                    <p>Final completion date: <span class="label label-success"> <sapn id="span_max_deadline"> 2015-04-20</sapn></span></p>
+                    <!--<p>Progress</p>-->
+            		<div class="progress" id="progress_completed">
+                		<div class="progress-bar progress-bar-info" role="progressbar" aria-valuenow="20" aria-valuemin="0" aria-valuemax="100" style="width: 0%">
+                    		<span class="sr-only"></span>
+                    		<span></span>% Completed !
+                		</div>
+            		</div>
+					<ul class="blog-info">
+						<!--<li><i class="fa fa-tags"></i> Deadline</li>-->
+                        <li><i class="fa fa-calendar"></i> <span>Deadline： </span> <span id="p_deadline">...</span></li>
+						
+					</ul>
+					<p>Current Task: <span id="p_text_task"></span></p>
+                    <p>Action: <span id="p_text_action">No content!</span></p>
+					<div class="form-group">
+                       <input type="text" class="form-control"  placeholder="Add a description" id="text_annotation">
+                       <!--<p id="p_text_action">No content!</p>-->
+                       <input type="hidden" name="eid" id="text_ee_eid" value="">
+                       <input type="hidden" name="progressing" id="text_ee_progressid" value="">
+                       <input type="hidden" name="nextdeadline" id="text_ee_nextdeadline" value="">
+                    </div>
+                    <div class="clearfix">
+                    	<button type="button" class="btn green btn-xs" id="btn_green_complete"> Complete</button>
+                      	<button type="button" class="btn blue btn-xs" id="btn_blue_add"> Edit Title</button>
+                      
+                    </div>
+				</div>
+			</div>
+
+            
+            <br />
+            <br />
+            <div id="accordion1" class="panel-group">
+                <div class="panel panel-danger">
+                    <div class="panel-heading">
+                        <h4 class="panel-title">
+                            <a class="accordion-toggle" data-toggle="collapse" data-parent="#accordion1" href="#accordion1_2">
+                            Workflow
+                            </a>
+                        </h4>
+                    </div>
+                    <div id="accordion1_2" class="panel-collapse collapse">
+                         <div class="panel-body" id="div_workflow"></div>
+                    </div>
+                </div>
+            </div>
+            <br />
+        </div>
+        <!-- END LEFT SIDEBAR -->
+
+        <!-- BEGIN RIGHT SIDEBAR --> 
+        <div class="col-md-3 col-sm-3 sidebar">
+        <!--<div class="col-md-3 blog-sidebar">-->
+        	<br />
+            <h2 class="no-top-space">Supervisor</h2>
+           	<p>Subject: &nbsp; <span id="span_subject"></span></p>
+           	<p>Name: &nbsp; <span id="span_teacherName"></span></p>
+            <br />
+           	<h2 class="no-top-space">To be Confirmed</h2>
+            <table class="table">
+                <tbody id="tb_selSubject"></tbody>
+            </table>
+            
+        </div>
+        <!-- END RIGHT SIDEBAR -->            
+    </div>
+    <!-- END BEGIN BLOG -->
+</div>
+<!-- END CONTAINER -->
+
+	
+	
+	
+    
+    <!-- END COPYRIGHT -->
+
+    <!-- Load javascripts at bottom, this will reduce page load time -->
+    <!-- BEGIN CORE PLUGINS(REQUIRED FOR ALL PAGES) -->
+    <!--[if lt IE 9]>
+    <script src="assets/plugins/respond.min.js"></script>  
+    <![endif]
+    <script src="assets/plugins/jquery-1.10.2.min.js" type="text/javascript"></script>
+    <script src="assets/plugins/jquery-migrate-1.2.1.min.js" type="text/javascript"></script>
+    <script src="assets/plugins/bootstrap/js/bootstrap.min.js" type="text/javascript"></script>      
+    <script type="text/javascript" src="assets/plugins/hover-dropdown.js"></script>
+    <script type="text/javascript" src="assets/plugins/back-to-top.js"></script>    
+     END CORE PLUGINS -->
+
+    <!-- BEGIN PAGE LEVEL JAVASCRIPTS(REQUIRED ONLY FOR CURRENT PAGE) -->
+    <script type="text/javascript" src="assets/plugins/bootstrap-datepicker/js/bootstrap-datepicker.js"></script>
+    <script type="text/javascript" src="assets/plugins/fuelux/js/spinner.min.js"></script>
+    <script type="text/javascript" src="assets/plugins/fancybox/source/jquery.fancybox.pack.js"></script>  
+    <!--<script src="assets/scripts/app.js"></script>  -->
+    <script src="ajax/ee_student_progress.js"></script>
+    <script type="text/javascript">
+        jQuery(document).ready(function() {
+            $('#d_text_title').hide();
+			addInfoProgressing.init();
+			addInfoProgressing.addCompletToTable();
+			
+			$('#btn_green_complete').click(function(){
+				addInfoProgressing.saveInfoToData();
+			});
+			$('#btn_blue_add').click(function(){
+
+				if($("#s_h_flag").val() == 0 ){
+					$('#d_text_title').show();
+					$("#s_h_flag").val("1");
+					$("#btn_blue_add").text('Save Title')
+				}else{
+					addInfoProgressing.updateTitleToData();
+					$('#d_text_title').hide();
+					$("#s_h_flag").val("0");
+					$("#btn_blue_add").text('Edit Title')
+				}
+			});
+			
+			$("button.btn.purple").die().live("click",function(){
+				if(confirm("Are you really sure you want to delete this record?")){
+					var idVal = $(this).attr("id");
+					addInfoProgressing.deleteCompletInfo(idVal);
+				}
+			});
+  
+        });
+    </script>
+    <!-- END PAGE LEVEL JAVASCRIPTS -->

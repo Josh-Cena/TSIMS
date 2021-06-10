@@ -1,0 +1,221 @@
+<!-- BEGIN BREADCRUMBS -->   
+<div class="row breadcrumbs margin-bottom-40">
+    <div class="container">
+        <div class="col-md-4 col-sm-4">
+            <h1>申请实验室</h1>
+        </div>
+        <div class="col-md-8 col-sm-8">
+            <ul class="pull-right breadcrumb">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="">IA</a></li>
+                <li class="active">实验室</li>
+            </ul>
+        </div>
+    </div>
+</div>
+<!-- END BREADCRUMBS -->
+
+<!-- BEGIN CONTAINER -->   
+<div class="container min-hight">
+    <div class="row">
+        <!-- BEGIN LEFT SIDEBAR -->            
+        <div class="col-md-9 blog-tag-data margin-bottom-40">
+            <h2>申请使用</h2>
+			<br />
+            <!--<p>Progress</p>-->
+            <div class="form-group">
+                <label class="col-md-3 control-label">项目</label>
+                <div class="col-md-9">
+                   <select  class="form-control" id="select_my_project">
+                      <!--<option value='0'>选择活动组......</option>-->
+                   </select>
+                </div>
+            </div>
+            <br /><br />
+            <div class="form-group">
+                <label class="col-md-3 control-label">实验说明</label>
+                <div class="col-md-9">
+                     <input type="text" class="form-control"  placeholder="Enter text" id="txt_content">
+                </div>
+            </div>
+            <br /><br />
+            <div class="form-group">
+                <label class="control-label col-md-3">时间及日期</label>
+                <div class="col-md-9">
+                    <div class="input-group  date date-picker" data-date-format="yyyy-mm-dd" data-date-start-date="-20d">
+                        <input type="text" class="form-control" readonly id="text_a_date">
+                        <span class="input-group-btn">
+                        <button class="btn default" type="button"><i class="fa fa-calendar"></i></button>
+                        </span>
+                    </div>
+                    <!-- /input-group -->      
+                                  
+                </div>
+            </div>
+            <br /><br />
+            <div class="form-group">
+                <label class="col-md-3 control-label"></label>
+                <div class="col-md-9">
+                   <select  class="form-control" id="select_period">
+                      <!--<option value='0'>选择活动组......</option>-->
+                   </select>
+                </div>
+            </div>
+            <br /><br />            
+            <div class="form-group">
+                <label class="col-md-3 control-label">主要设备或仪器</label>
+                <div class="col-md-9">
+                    <textarea class="form-control" rows="2" id="text_device"></textarea>
+                    <span class="text-danger"></span>
+                </div>
+                
+            </div>
+           	<br /><br /><br />
+            <div class="form-group">
+                <label class="col-md-3 control-label">材料或试剂</label>
+                <div class="col-md-9">
+                     <textarea class="form-control" rows="2" id="text_material"></textarea>
+                    <span class="text-danger"></span>
+                </div>
+                
+            </div>
+            
+            <br />
+            <div class="form-group"></div>
+            
+            <br />
+           
+            
+            <!--
+            <div class="form-group">
+                <label  class="col-md-3 control-label">添加活动照片附件</label>
+                <div class="col-md-4">
+                  <input type="file" id="exampleInputFile1">
+                  <!--<p class="help-block">some help text here.</p>
+                </div>
+                
+                <div class="col-md-4">
+                  <input type="file" id="exampleInputFile2">
+                  <!--<p class="help-block">some help text here.</p>
+                </div>
+            </div>
+            -->
+            <br />
+
+            <div class="well well-sm">
+                <div class="form-actions right">
+                      <button type="button" class="btn blue" id="bn_save_records_info">Save your records</button>
+                      <!--<button type="button" class="btn default" id="bn_modify_your_records">Modify your records</button>-->                            
+                </div>
+			</div>
+            
+            <br />
+			<h2>记录列表</h2>
+            <div class="table-responsive">
+                <table class="table table-bordered ">
+                    <thead>
+                        <tr>
+                        <th style="width: 3%" class="fc-header-center"></th>
+                        <th style="width: 26%" class="fc-header-center">项目</th>
+                        <th style="width: 12%" class="fc-header-center">学科</th>
+                        <th style="width: 12%" class="fc-header-center">日期</th>
+                        <th style="width: 5%" class="fc-header-center">节</th>
+                        
+                        <th style="width: 8%" class="fc-header-center">确认</th>
+                        <th style="width: 8%" class="fc-header-center">完成</th>
+                        <th style="width: 26%" class="fc-header-center">备注</th>
+                        <th style="width: 6%" class="fc-header-center"></th>
+                    </tr>
+                    </thead>
+                    <tbody id="exptabledata"></tbody>
+                </table>
+            </div>
+            <br />
+        </div>
+        <!-- END LEFT SIDEBAR -->
+
+        <!-- BEGIN RIGHT SIDEBAR --> 
+        <div class="col-md-3 blog-sidebar margin-bottom-40">
+        	<br />
+            <h2 class="no-top-space">通知</h2>
+            
+            <ul class="nav sidebar-categories margin-bottom-40" id="ul_notice"></ul>                  
+            <!-- END BLOG TALKS -->
+			<div id="accordion1" class="panel-group">
+                <div class="panel panel-default">
+                    <div class="panel-heading">
+                        <h4 class="panel-title">
+                            <a class="accordion-toggle" data-toggle="collapse" data-parent="#accordion1" href="#accordion1_1">
+                            说明(Click me)
+                            </a>
+                        </h4>
+                    </div>
+                    <div id="accordion1_1" class="panel-collapse collapse">
+                        <div class="panel-body">
+                            <p>1、你的实验室申请应提前三天提交，同一项目一次最多提交两个申请，也就是已申请而未实施和已申请未确认的实验室的使用不能超过两次；</p>
+                            <p>2、请认真填写试验设备仪器以及材料或试剂，建议你提前与实验室老师沟通，避免由于没有相应仪器设备使试验无法实施；</p>
+                            <p>3、请注明自备试验设备仪器以及材料或试剂；</p>
+                            <p>4、如果你提出的申请被拒绝，请查明原因重新申请；</p>
+                            <p>5、如果你因故不能按时实施你的实验，请提前通知实验老师，以便实验室另做安排；</p>
+                            <p>6、如果你提出的申请被确认，而无故没有按时实施，你的申请会被记录，将影响你今后的实验室使用。</p>
+                        </div>
+                    </div>
+                </div>         
+            </div>
+        </div>
+        <br />
+        </div>
+        <!-- END RIGHT SIDEBAR -->            
+    </div>
+    <!-- END BEGIN BLOG -->
+</div>
+<!-- END CONTAINER -->
+
+    <!-- BEGIN PAGE LEVEL JAVASCRIPTS(REQUIRED ONLY FOR CURRENT PAGE) -->
+    <script type="text/javascript" src="assets/plugins/bootstrap-datepicker/js/bootstrap-datepicker.js"></script>
+    <script type="text/javascript" src="assets/plugins/fuelux/js/spinner.min.js"></script>
+    <script type="text/javascript" src="assets/plugins/fancybox/source/jquery.fancybox.pack.js"></script>  
+    <!--<script src="assets/scripts/app.js"></script>  -->
+    <script src="ajax/ia_exp_application.js"></script>
+    <script type="text/javascript">
+        jQuery(document).ready(function() {
+             if (jQuery().datepicker) {
+				$('.date-picker').datepicker({
+					//rtl: App.isRTL(),
+					autoclose: true
+				});
+			}
+			//$('#d_groupleader_yes').hide();
+			addExpRecordInfo.addProjectDropdown();
+			addExpRecordInfo.addPeriodDropdown();
+			addExpRecordInfo.addExpTabal();
+			
+			$('#bn_save_records_info').attr({'disabled':'disabled'});
+			
+			$('#select_my_project').change(function(){
+				$('#bn_save_records_info').attr({'disabled':'disabled'});
+				if($('#select_my_project').children('option:selected').val()!= 0){
+			
+				  $("#bn_save_records_info").removeAttr("disabled");
+				}
+			});
+			
+			
+			
+			$('#bn_save_records_info').click(function(){
+				
+				$('#bn_save_records_info').attr({'disabled':'disabled'});
+				addExpRecordInfo.saveExpInfo();
+			});
+			
+			$("button.btn.purple").die().live("click",function(){
+				if(confirm("Are you really sure you want to delete this record?")){
+					var idVal = $(this).attr("id");
+					//alert(idVal);
+					addExpRecordInfo.deleteExpInfo(idVal);
+				}
+			});
+  
+        });
+    </script>
+    <!-- END PAGE LEVEL JAVASCRIPTS -->

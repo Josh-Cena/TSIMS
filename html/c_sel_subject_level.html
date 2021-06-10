@@ -1,0 +1,230 @@
+<!-- BEGIN BREADCRUMBS -->   
+<div class="row breadcrumbs margin-bottom-40">
+    <div class="container">
+        <div class="col-md-4 col-sm-4">
+            <h1>选课</h1>
+        </div>
+        <div class="col-md-8 col-sm-8">
+            <ul class="pull-right breadcrumb">
+                <li><a href="home.html">Home</a></li>
+                <li><a href="">课程</a></li>
+                <li class="active">选层</li>
+            </ul>
+        </div>
+    </div>
+</div>
+<!-- END BREADCRUMBS -->
+
+<!-- BEGIN CONTAINER --> 
+<div class="container  min-hight">
+    <div class="row">
+        <div class="col-md-9 col-sm-9">
+            <div class="panel-body well">
+             <!--<form>-->
+                <div class="form-body" id="div_subject">
+                   <div class="row" id="div_subject_1">
+                   		<div class="col-md-12">
+                        <p>1. <span id="subject1"></span></p>
+                        </div>
+                        <div class="col-md-9">
+                          	<select  class="form-control" id="select_level_1"></select>
+                        </div>
+                        <div class="col-md-3">
+                        	<div class="form-actions right"> 
+                                <button type="button" class="btn green" id="btn_subject_level_1">Save your choices</button>
+                            </div>
+                        </div>
+                   </div>
+                   <hr />
+                   <div class="row" id="div_subject_2">
+                   		<div class="col-md-12">
+                        
+                        <p>2. <span span id="subject2"></span> </p>
+                        </div>
+                        <div class="col-md-9">
+                          	<select  class="form-control" id="select_level_2"></select>
+                        </div>
+                        <div class="col-md-3">
+                        	<div class="form-actions right">                           
+                                <button type="button" class="btn green" id="btn_subject_level_2">Save your choices</button>
+                            </div>
+                        </div>
+                   </div>
+                   <hr />
+                   <div class="row" id="div_subject_3">
+                   		<div class="col-md-12">
+                        
+                        <p>3. <span id="subject3"></span></p>
+                        </div>
+                        <div class="col-md-9">
+                          	<select  class="form-control" id="select_level_3"></select>
+                        </div>
+                        <div class="col-md-3">
+                        	<div class="form-actions right">                           
+                                <button type="button" class="btn green" id="btn_subject_level_3">Save your choices</button>
+                            </div>
+                        </div>
+                   </div>
+                   <hr />
+                   <div class="row" id="div_subject_4">
+                   		<div class="col-md-12">
+                        
+                        <p>4. <span id="subject4"></span></p>
+                        </div>
+                        <div class="col-md-9">
+                          	<select  class="form-control" id="select_level_4"></select>
+                        </div>
+                        <div class="col-md-3">
+                        	<div class="form-actions right">                           
+                                <button type="button" class="btn green" id="btn_subject_level_4">Save your choices</button>
+                            </div>
+                        </div>
+                   </div>
+                   <hr />
+                   <div class="row" id="div_subject_5">
+                   		<div class="col-md-12">
+                        
+                        <p>5. <span id="subject5"></span></p>
+                        </div>
+                        <div class="col-md-9">
+                          	<select  class="form-control" id="select_level_5"></select>
+                        </div>
+                        <div class="col-md-3">
+                        	<div class="form-actions right">                           
+                                <button type="button" class="btn green" id="btn_subject_level_5">Save your choices</button>
+                            </div>
+                        </div>
+                   </div>
+                   <hr />
+                   <div class="row" id="div_subject_6">
+                   		<div class="col-md-12">
+                        
+                        <p>6. <span id="subject6"></span></p>
+                        </div>
+                        <div class="col-md-9">
+                          	<select  class="form-control" id="select_level_6"></select>
+                        </div>
+                        
+                        <div class="col-md-3">
+                        	<div class="form-actions right">                           
+                                <button type="button" class="btn green" id="btn_subject_level_6">Save your choices</button>                            </div>
+                        </div>
+                   </div>
+                </div>
+                
+            </div> 
+        	<br />
+        </div>
+
+        <div class="col-md-3 col-sm-3 sidebar">
+            <div class="clearfix">
+                
+                 <div class="panel panel-success">
+                   <!-- Default panel contents -->
+                    <div class="panel-heading">
+                        <h3 class="panel-title">已选的课</h3>
+                    </div>
+                    <div class="panel-body">
+                        <p>如果需要修改，可将原选课删除，重新选择！</p>
+                    </div>
+                    <!-- Table -->
+                    <table class="table">
+                        <tbody id="tb_selSubject"></tbody>
+                    </table>
+                </div>
+            </div> 
+             
+            <address>
+                Student No.: <span id="s_studentNo"></span><br>
+                Name: <span id="s_studentNanme"></span><br>
+                <!--<abbr title="Phone">P:</abbr> (234) 145-1810-->
+            </address>
+            
+            <div class="space10"></div>
+
+            <h4>选课说明</h4>    
+            <div id="accordion1" class="panel-group">
+            
+                <div class="panel panel-default">
+                    <div class="panel-heading">
+                        <h4 class="panel-title">
+                            <a class="accordion-toggle" data-toggle="collapse" data-parent="#accordion1" href="#accordion1_1">
+                            说明(Click me)
+                            </a>
+                        </h4>
+                    </div>
+                    <div id="accordion1_1" class="panel-collapse collapse">
+                        <div class="panel-body">
+                            <p>选课(Level)说明</p>
+                            <ul>
+                                <li>你只能在现有的选课选择LeveL；</li>
+                                <li>在你的选课中至少要有三个HL；</li>
+                                <li>如果你改变了主意，要先删除原来的选课后重新选择。</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>         
+            </div>
+            <br /><br />
+            <!-- END FORM-->                             
+        </div>            
+    </div>
+</div>
+<!-- END CONTAINER -->
+<!-- END COPYRIGHT -->
+
+<!-- Load javascripts at bottom, this will reduce page load time -->
+<!-- BEGIN CORE PLUGINS(REQUIRED FOR ALL PAGES) -->
+<!--[if lt IE 9]>
+<script src="assets/plugins/respond.min.js"></script>  
+<![endif]-->  
+
+<script src="ajax/sel_subject_level.js"></script>
+<!-- BEGIN PAGE LEVEL JAVASCRIPTS(REQUIRED ONLY FOR CURRENT PAGE) -->
+
+<script type="text/javascript">
+    jQuery(document).ready(function() {
+       	sTableEditable.addDataToTable();  
+	   	sTableEditable.addSelToTable(); 
+		
+		$('#div_subject_1').hide();
+		$('#div_subject_2').hide();
+		$('#div_subject_3').hide();
+		$('#div_subject_4').hide();
+		$('#div_subject_5').hide();
+		$('#div_subject_6').hide();
+		
+	   	$('#btn_subject_level_1').click(function(){
+		  	var selValue=$('#select_level_1').children('option:selected').val();
+			sTableEditable.addSelLevel(selValue);
+	  	});
+		$('#btn_subject_level_2').click(function(){
+		  	var selValue=$('#select_level_2').children('option:selected').val();
+			sTableEditable.addSelLevel(selValue);
+	  	});
+		$('#btn_subject_level_3').click(function(){
+		  	var selValue=$('#select_level_3').children('option:selected').val();
+			sTableEditable.addSelLevel(selValue);
+	  	});  
+		$('#btn_subject_level_4').click(function(){
+		  	var selValue=$('#select_level_4').children('option:selected').val();
+			sTableEditable.addSelLevel(selValue);
+	  	}); 
+		$('#btn_subject_level_5').click(function(){
+		  	var selValue=$('#select_level_5').children('option:selected').val();
+			sTableEditable.addSelLevel(selValue);
+	  	}); 
+		$('#btn_subject_level_6').click(function(){
+		  	var selValue=$('#select_level_6').children('option:selected').val();
+			
+			sTableEditable.addSelLevel(selValue);
+	  	});
+		$("button.btn.purple").die().live("click",function(){
+			if(confirm("Are you really sure you want to delete this record?")){
+				var idVal = $(this).attr("id");
+				sTableEditable.delSelLevel(idVal);
+			}
+		});                   
+    });
+</script>
+<!-- END PAGE LEVEL JAVASCRIPTS -->

@@ -1,0 +1,130 @@
+<!-- BEGIN BREADCRUMBS -->   
+<div class="row breadcrumbs margin-bottom-40">
+    <div class="container">
+        <div class="col-md-4 col-sm-4">
+            <h1>CAS评价</h1>
+        </div>
+        <div class="col-md-8 col-sm-8">
+            <ul class="pull-right breadcrumb">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="">CAS</a></li>
+                <li class="active">CAS评价</li>
+            </ul>
+        </div>
+    </div>
+</div>
+<!-- END BREADCRUMBS -->
+
+<!-- BEGIN CONTAINER -->   
+<div class="container min-hight">
+    <div class="row">
+        <!-- BEGIN LEFT SIDEBAR --> 
+        <div class="col-md-1">
+        </div>           
+        <div class="col-md-10">
+          	<div id="action record">
+                <h2 class="no-top-space">CAS评价</h2>
+                
+            </div>
+            <br>
+            <div class="form-group">
+                <label></label>
+                  <div class="col-md-4">
+                   <select  class="form-control" id="select_item_term"></select>
+                </div>
+            </div> 
+            <br>        
+            <h4>记录列表</h4>
+               
+            <div class="portlet-body">
+              <div class="table-responsive">
+                   <table class="table table-striped table-bordered">
+                      <thead>
+                        <tr>
+                          <th style="width: 4%" class="fc-header-center"></th>
+                          <th style="width: 18%" class="fc-header-center">社团名称</th>
+                          <th style="width: 22%" class="fc-header-center">英文名称</th>
+                          <th style="width: 10%" class="fc-header-center">职务</th>
+                          <th style="width: 7%" class="fc-header-center">Project</th>
+                          <th style="width: 10%" class="fc-header-center">记录数</th>
+                          <th style="width: 6%" class="fc-header-center">C</th>
+                          <th style="width: 6%" class="fc-header-center">A</th>
+                          <th style="width: 6%" class="fc-header-center">S</th>
+                          <th style="width: 6%" class="fc-header-center">小计</th>
+                        </tr>
+                      </thead>
+                      <tbody id="recorddata"></tbody>
+                  </table>
+              </div>
+            </div>
+            
+            <br />
+            <h4>反思列表</h4>
+            <div class="portlet-body">
+              <div class="table-responsive">
+                   <table class="table table-striped table-bordered">
+                      <thead>
+                        <tr>
+                          <th style="width: 4%" class="fc-header-center"></th>
+                          
+                          <th style="width: 39%" class="fc-header-center">反思内容</th>
+                          <th style="width: 20%" class="fc-header-center">社团名称</th>
+                          <th style="width: 12%" class="fc-header-center">提交日期</th>
+                          <th style="width: 8%" class="fc-header-center">评价</th>
+                          
+                          <th style="width: 18%" class="fc-header-center">Learning Outcome</th>
+                        </tr>
+                      </thead>
+                      <tbody id="reflectdata"></tbody>
+                  </table>
+              </div>
+            </div>
+            <br />
+              
+            <h4>学期评价</h4>
+            <div class="portlet-body">
+              <div class="table-responsive">
+                   <table class="table table-striped table-bordered">
+                      <thead>
+                        <tr>
+                         	<th style="width: 10%" class="fc-header-center">活动记录(30%)</th>
+                            <th style="width: 10%" class="fc-header-center">活动反思(40%)</th>
+                            <th style="width: 10%" class="fc-header-center">班主任评价(30%)</th>
+                            <th style="width: 8%" class="fc-header-center">总评(5分)</th>
+                        </tr>
+                      </thead>
+                      <tbody id="finaltdata">
+                        <tr>
+                            <td class="fc-header-center">—</td>
+                            <td class="fc-header-center">—</td>
+                            <td class="fc-header-center">—</td>
+                            <td class="fc-header-center">—</td>
+                          </tr>
+                      </tbody>
+                  </table>
+              </div>
+           </div>
+           <br />
+        </div>
+       
+    <!-- END BEGIN BLOG -->
+</div>
+<!-- END CONTAINER -->
+
+    <script type="text/javascript" src="assets/plugins/fuelux/js/spinner.min.js"></script>
+    <script type="text/javascript" src="assets/plugins/fancybox/source/jquery.fancybox.pack.js"></script>  
+    <!--<script src="assets/scripts/app.js"></script>  -->
+    <script src="ajax/init_term_dropdown.js"></script>
+    <script src="ajax/cas_student_activity_evalution.js"></script>
+    <script type="text/javascript">
+        jQuery(document).ready(function() {
+            //App.init();
+			initTermDropDown.init();
+			$('#spinner1').spinner(); 
+			$('#select_item_term').change(function(){
+				var selTermValue=$(this).children('option:selected').val();
+				addStudentList.init(selTermValue);
+  			});                     
+        });
+    </script>
+    <!-- END PAGE LEVEL JAVASCRIPTS -->
